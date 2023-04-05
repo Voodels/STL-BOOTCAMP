@@ -1,0 +1,228 @@
+#include <bits/stdc++.h>
+#include <vector>
+#include <iostream>
+
+using namespace std;
+void prtvec( vector<int> &a){
+        
+           for(int i= 0;i<a.size();i++){
+            cout<<a[i]<<" ";
+        }cout<<endl;
+}
+int main() {
+    // cout<<"Hello"<<endl;
+        
+        vector<int> a;  //declared the vector;
+
+        //initializing vector 'a' 
+        for(int i= 0;i<9;i++){
+            a.push_back(i);
+        }
+
+        //printing vector
+
+        for(int i ; i != a.size(); ++i){
+            cout<<a[i]<<" ";
+        }
+        
+        
+        cout<<endl;
+        
+        //printing using 
+        
+    //     vector<int> :: iterator it;
+    //   for(it)
+    
+    //Size vs Capacity 
+    //capacity doubles the size of vector
+    
+    
+    cout<<"\nSize : "<< a.size();
+    
+    cout<<"\nCapacity : "<< a.capacity();
+    
+    cout<<"\nMaxsize : "<<a.max_size();
+    
+    // cout<<"\nResize : "<< a.resize(4);
+    
+    if(a.empty() == false){
+        cout<<"\nnot empty";
+    }else{
+        cout<<"\nempty";
+    }
+        
+    a.assign(4,7);
+    
+    for(int i = 0;i<a.size();i++){
+        cout<<" "<< a[i];
+    }cout<<"\n";
+    
+    a.push_back(10);
+    int n = a.size();
+    cout<<"last element is : "<< ""<<a[n-1];
+    cout<<endl;
+    
+    a.pop_back();
+        for(int i= 0;i<a.size();i++){
+            cout<<a[i]<<" ";
+        }cout<<endl;
+
+    //INSERTING ADDING AT THE BEGGIMING
+    
+    a.insert(a.begin(),3);
+        for(int i= 0;i<a.size();i++){
+            cout<<a[i]<<" ";
+        }cout<<endl;
+        
+     cout<< "//removing first vector;"<<endl;
+    prtvec(a);
+    a.erase(a.begin());
+    prtvec(a);
+    
+   cout<< "//clearing the whole vector;"<<endl;
+        a.clear();
+       cout<<a.size();
+        
+    //maing multiple vectors of 
+    vector<int> a1,a2;
+    a1.push_back(3);
+    a1.push_back(4);
+    a2.push_back(5);    
+    a2.push_back(6);    
+    
+    cout<<"\n vector a1 is ";
+     for(int i= 0;i<a1.size();i++){
+            cout<<a1[i]<<" ";
+        }cout<<endl;
+        
+    cout<<"\n vector a2 is ";
+     for(int i= 0;i<a2.size();i++){
+            cout<<a2[i]<<" ";
+        }cout<<endl;
+        
+        //Swaping two vectors 
+        a1.swap(a2);
+        
+    cout<<"\nafter swapping the vectors"<<endl;
+    cout<<"\n vector a1 is ";
+     for(int i= 0;i<a1.size();i++){
+            cout<<a1[i]<<" ";
+        }cout<<endl;
+        
+    cout<<"\n vector a2 is ";
+     for(int i= 0;i<a2.size();i++){
+            cout<<a2[i]<<" ";
+        }cout<<endl;
+           
+        
+        
+    //pushing multiple values ''    
+        for(int i = 0;i<=10;i++){
+            a.push_back(i*10);
+        }
+        cout<<"\nat : a.at(4) = "<<a.at(4);
+        
+        
+        //front and back 
+        cout<<endl;
+        
+        cout<<"\nfront() : a.front() = "<<a.front();
+        // cout<<"\nfront() : a.front() = "<<a.begin();
+        
+        cout<<"\nback() : a.back() = "<<a.back();
+        
+        
+        
+        
+        
+        
+        
+        
+}
+=--=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <iostream>
+#include <utility>
+
+using namespace std;
+
+int main()
+{
+    // cout<<"Hello World";
+    
+    //PAIR 
+    
+    //combining two differnt datattpe values
+    pair<int ,char> PAIRNAME;
+        
+        
+        PAIRNAME.first = 100 ;
+        PAIRNAME.second = 'C' ;//single quote because char not string
+        cout<<"\n"<<PAIRNAME.first<<  " ";
+        cout<<"\n"<<PAIRNAME.second<<endl;
+        
+        
+    pair<char,int> pair1 = make_pair('A',1);
+    pair<char,int> pair2 = make_pair('B',2);
+    
+    cout<<"\n Before swapping ;"<<endl;
+    cout<<"content of pair1 =";
+    cout<<" "<<pair1.first<<" "<<pair1.second;
+    cout<<endl;
+    cout<<"content of pair2 =";
+    cout<<" "<<pair2.first<<" "<<pair2.second;
+    cout<<endl;
+    
+    //
+    pair1.swap(pair2);
+    //
+    
+    
+    cout<<"\n after swapping ;"<<endl;
+    cout<<"content of pair1 =";
+    cout<<" "<<pair1.first<<" "<<pair1.second;
+    cout<<endl;
+    cout<<"content of pair2 =";
+    cout<<" "<<pair2.first<<" "<<pair2.second;
+        
+    return 0;
+}
+
+Q/66. Plus One
+-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+#include <iostream>
+#include<stack>
+
+using namespace std;
+
+int main()
+{
+    // STACK //- last in first out 
+    
+    stack<int> st;
+    st.push(1);
+    st.push(2);
+    st.push(3);
+    st.push(4);
+    st.push(5);
+    st.pop();
+    st.pop();
+    st.pop();
+    st.pop();
+    st.pop();
+    cout<<st.size()<<" "<<st.empty()<<" ";
+    
+    
+    return 0;
+}
+
+Q/20. Valid Parentheses
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-==--=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-===-=-=-
